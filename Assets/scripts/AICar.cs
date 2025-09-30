@@ -29,6 +29,6 @@ public class AICar : MonoBehaviour
 
         Quaternion lookRotation = Quaternion.LookRotation(direction);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation lookRotationm rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotationm rotationSpeed * Time.deltaTime);
     }
 }
