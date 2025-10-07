@@ -9,7 +9,7 @@ public class AICar : MonoBehaviour
 
     public float speed = 10f;
 
-    public float rotationSpeed = 5f;
+    public float rotationSpeed = 50f;
 
     // Update is called once per frame
     void Update()
@@ -27,9 +27,9 @@ public class AICar : MonoBehaviour
 
         transform.Translate(direction * speed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, target.position) < 2f)
+        if (Vector3.Distance(transform.position, target.position) < 1f)
         {
-            currentWaypointIndex += 1;
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         }
     }
 }
