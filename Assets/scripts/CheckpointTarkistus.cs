@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CheckpointTarkitus : MonoBehaviour
+public class CheckpointTarkistus : MonoBehaviour
 {
 
     public int checkpointCount = 3;
