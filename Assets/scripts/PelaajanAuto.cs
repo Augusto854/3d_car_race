@@ -16,6 +16,8 @@ public class PelaajanAuto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.gameRunning)
+        {
         //luetaan pystysuuntainen liike
         float move = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         //luetaan vaakasuuntainen liike
@@ -24,5 +26,6 @@ public class PelaajanAuto : MonoBehaviour
         transform.Translate(Vector3.forward * move);
 
         transform.Rotate(Vector3.up * turn);
+        }
     }
 }

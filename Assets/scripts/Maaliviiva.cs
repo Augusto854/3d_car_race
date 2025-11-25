@@ -16,8 +16,18 @@ public class Maaliviiva : MonoBehaviour
             {
                 winnerDeclared = true;
                 winnerText.text = "!RACE ENDED!\nWinner: " + id.car_name;
-                winnerText.color = Color.yellow;
+
+                if (id.type == CarType.Player)
+                {
+                    winnerText.color = Color.yellow;
+                }
+                else
+                {
+                    winnerText.color = Color.red;
+                }
+                
                 winnerText.gameObject.SetActive(true);
+                GameManager.Instance.gameRunning = false;
             }
             else
             {
